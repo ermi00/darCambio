@@ -15,16 +15,17 @@ let lista = [];
 
 function meterMoneda(boton) {
   lista.push(parseInt(boton.value));
-  sumarTotal()
-}
-
-function sumarTotal() {
   let total = lista.reduce((a, b) => a + b, 0);
   tuCuenta.innerHTML = `Tu cuenta $${total}`;
+  console.log(`Esto vale lista ahora --> ${lista}`);
+  console.log(`Esto vale el total ahora --> ${total}`);
 }
 
 function deshacerMoneda() {
-  let total = sumarTotal();
-  total.pop();
-  tuCuenta.innerHTML = `Tu cuenta $${total}`;
-}
+  let total = lista.reduce((a, b) => a + b, 0);
+  lista.pop();
+  let nuevoTotal = lista.reduce((a, b) => a + b, 0);
+  tuCuenta.innerHTML = `Tu cuenta $${nuevoTotal}`;
+  console.log(`DESHACER Esto vale lista ahora --> ${lista}`);
+  console.log(`DESHACER Esto vale el total ahora --> ${nuevoTotal}`);
+} 
