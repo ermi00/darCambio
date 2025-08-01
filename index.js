@@ -10,22 +10,89 @@ let btn200 = document.getElementById("btn$200");
 let btn500 = document.getElementById("btn$500");
 let btn1000 = document.getElementById("btn$1000");
 let tuCuenta = document.getElementById("tuCuenta");
+let ptotalCuenta = document.getElementById("totalCuenta");
+let pteDan = document.getElementById("teDan");
+let centavo50 = parseFloat(btn50cc.value);
 
+let totalCuenta = Math.floor(Math.random() * 100);
+let cambioDado;
+
+let billete10 = {
+  nombre: "10",
+  valor: 10 - totalCuenta,
+};
+
+let billete20 = {
+  nombre: "20",
+  valor: 20 - totalCuenta,
+};
+
+let billete50 = {
+  nombre: "50",
+  valor: 50 - totalCuenta,
+};
+
+let billete100 = {
+  nombre: "100",
+  valor: 100 - totalCuenta,
+};
+
+let billete200 = {
+  nombre: "200",
+  valor: 200 - totalCuenta,
+};
+
+let billete500 = {
+  nombre: "500",
+  valor: 500 - totalCuenta,
+};
+
+let billetes = [
+  billete10,
+  billete20,
+  billete50,
+  billete100,
+  billete200,
+  billete500,
+];
+
+let teDan = parseInt(queBilleteUsar(billetes));
 let lista = [];
 
 function meterMoneda(boton) {
-  lista.push(parseInt(boton.value));
+  lista.push(parseFloat(boton.value));
   let total = lista.reduce((a, b) => a + b, 0);
-  tuCuenta.innerHTML = `Tu cuenta $${total}`;
-  console.log(`Esto vale lista ahora --> ${lista}`);
-  console.log(`Esto vale el total ahora --> ${total}`);
+  tuCuenta.innerHTML = `Tu cuenta $ ${total.toFixed(2)}`;
+  cambioDado = total;
 }
 
-function deshacerMoneda() {
-  let total = lista.reduce((a, b) => a + b, 0);
+function deshacerMovimiento() {
   lista.pop();
   let nuevoTotal = lista.reduce((a, b) => a + b, 0);
-  tuCuenta.innerHTML = `Tu cuenta $${nuevoTotal}`;
-  console.log(`DESHACER Esto vale lista ahora --> ${lista}`);
-  console.log(`DESHACER Esto vale el total ahora --> ${nuevoTotal}`);
-} 
+  tuCuenta.innerHTML = `Tu cuenta $ ${nuevoTotal.toFixed(2)}`;
+  cambioDado = total;
+}
+
+function queBilleteUsar(billetes) {
+  let lista = [];
+
+  for (let billete of billetes) {
+    if (billete.valor >= 0) lista.push(billete);
+  }
+
+  return lista[0].nombre;
+}
+
+function entregarCambio(){
+  resultado = teDan - totalCuenta
+  resultadoUsuario = cambioDado;
+
+  if(resultado == resultadoUsuario){
+    alert("EXITO!")
+  } else{
+    alert("EL CAMBIO ESTA MAL!") 
+  }
+}
+
+ptotalCuenta.innerHTML = `Total $${totalCuenta}`;
+pteDan.innerHTML = `Recibes $${teDan}`;
