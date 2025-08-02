@@ -1,7 +1,75 @@
-body{
-    font-family: monospace, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+body {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-button{
-    padding: 10px;
+.divPadreBotones {
+    display: flex;
+}
+
+.divHijoBotonesOpciones {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 0;
+    margin: 10px;
+    border: none;
+    transform: translateY(-5px);
+}
+
+button:hover {
+    opacity: 80%;
+    transform: translateY(-4px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+img {
+    width: 100px;
+    image-rendering: pixelated;
+}
+
+.imgBtn {
+    width: 220px;
+}
+
+.divPantalla {
+    position: relative;
+    width: 600px;
+}
+
+.imgPantalla {
+    width: 100%;
+}
+
+.pCobro{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    z-index: 1;
+    color: white;
+    font-size: x-large;
+}
+
+.pMensajes{
+    width: 520px;
+    position: absolute;
+    top: 260px;
+    left: 30px;
+    z-index: 1;
+    color: white;
+    font-size: x-large;
 }

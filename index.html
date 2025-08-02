@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <h1>Aprende a dar cambio</h1>
-    <p id="totalCuenta">Total $100</p>
-    <p id="teDan"></p>
+    <h1>Un nuevo cliente llego</h1>
+    <!-- <p id="totalCuenta">Total $100</p>
+    <p id="teDan"></p> -->
     <br>
-    <button value="0.50" id="btn$50cc" onclick="meterMoneda(this)">$50cc</button>
+    <!-- <button value="0.50" id="btn$50cc" onclick="meterMoneda(this)">$50cc</button>
     <button value="1" id="btn$1" onclick="meterMoneda(btn1)">$1</button>
     <button value="2" id="btn$2" onclick="meterMoneda(btn2)">$2</button>
     <button value="5" id="btn$5" onclick="meterMoneda(btn5)">$5</button>
-    <button value="10" id="btn$10" onclick="meterMoneda(btn10)">$10</button>
-    <button value="20" id="btn$20" onclick="meterMoneda(btn20)">$20</button>
-    <button value="50" id="btn$50" onclick="meterMoneda(btn50)">$50</button>
-    <button value="100" id="btn$100" onclick="meterMoneda(btn100)">$100</button>
-    <button value="200" id="btn$200" onclick="meterMoneda(btn200)">$200</button>
-    <button value="500" id="btn$500" onclick="meterMoneda(btn500)">$500</button>
-    <button value="1000" id="btn$1000" onclick="meterMoneda(btn1000)">$1000</button>
-    <button id="btnDeshacer" onclick="deshacerMovimiento()">Deshacer</button>
-    <button id="btnReiniciar" type="submit" >Reiniciar</button>
-    <p id="tuCuenta">Tu cuenta $ 0.00</p>
-    <button onclick="entregarCambio()">Entregar</button>
+    <button value="10" id="btn$10" onclick="meterMoneda(btn10)">$10</button> -->
+    <!-- <p id="tuCuenta">Tu cuenta $ 0.00</p> -->
+
+    <div class="divPantalla">
+        <img class="imgPantalla" src="/assets/fondo.gif" alt="">
+        <p class="pCobro">Total $100 <br> Recibes $100</p>
+        <p class="pMensajes">Ese no es el cambio correcto.</p>
+    </div>
+
+    <br>
+
+    <div class="divPadreBotones">
+        <div class="divHijoBotones">
+
+            <div>
+                <button value="20" id="btn$20" onclick="meterMoneda(btn20)"><img src="/assets/btn20.png"
+                        alt=""></button>
+                <button value="50" id="btn$50" onclick="meterMoneda(btn50)"><img src="/assets/btn50.png"
+                        alt=""></button>
+                <button value="100" id="btn$100" onclick="meterMoneda(btn100)"><img src="/assets/btn100.png"
+                        alt=""></button>
+            </div>
+
+            <div>
+
+                <button value="200" id="btn$200" onclick="meterMoneda(btn200)"><img src="/assets/btn200.png"
+                        alt=""></button>
+                <button value="500" id="btn$500" onclick="meterMoneda(btn500)"><img src="/assets/btn500.png"
+                        alt=""></button>
+                <button value="1000" id="btn$1000" onclick="meterMoneda(btn1000)"><img src="/assets/btn1k.png"
+                        alt=""></button>
+            </div>
+
+        </div>
+
+        <div class="divHijoBotonesOpciones">
+            <button id="btnDeshacer" onclick="deshacerMovimiento()"><img class="imgBtn" src="/assets/btnDeshacer.png"
+                    alt=""></button>
+            <button id="btnEntregar" onclick="entregarCambio()"><img class="imgBtn" src="/assets/btnEntregar.png"
+                    alt=""></button>
+        </div>
+    </div>
+
 </body>
 <script src="/index.js"></script>
+
 </html>
