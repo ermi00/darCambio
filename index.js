@@ -1,3 +1,4 @@
+let btn0 = document.getElementById("btn$0") 
 let btn50cc = document.getElementById("btn$50cc");
 let btn1 = document.getElementById("btn$1");
 let btn2 = document.getElementById("btn$2");
@@ -17,7 +18,6 @@ let divBilletes = document.getElementById("divBilletes");
 let divMonedas = document.getElementById("divMonedas");
 let iconoCambiar = document.getElementById("iconoCambiar")
 let contador = 0
-// let centavo50 = parseFloat(btn50cc.value);
 
 let totalCuenta = Math.floor(Math.random() * 100);
 let cambioDado;
