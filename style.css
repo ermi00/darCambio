@@ -12,6 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .divPadreBotones {
@@ -49,7 +51,7 @@ img {
 
 .divPantalla {
     position: relative;
-    width: 600px;
+    width: 420px;
     border: 5px solid white;
 }
 
@@ -60,14 +62,15 @@ img {
 
 .pCobro {
     position: absolute;
-    top: -7px;
-    left: 24px;
+    top: -5px;
+    left: 15px;
     z-index: 1;
     color: white;
     font-size: x-large;
     background-color: black;
-    width: 140px;
+    width: 100px;
     padding: 6px;
+    font-size: medium;
 }
 
 .pRecibes {
@@ -80,13 +83,13 @@ img {
 }
 
 .pMensajes {
-    width: 490px;
+    width: 340px;
     position: absolute;
-    top: 260px;
-    left: 30px;
+    top: 180px;
+    left: 20px;
     z-index: 1;
     color: white;
-    font-size: x-large;
+    font-size: 15px;
 }
 
 #divMonedas {

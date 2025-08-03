@@ -69,13 +69,15 @@ function meterMoneda(boton) {
   let total = lista.reduce((a, b) => a + b, 0);
   tuCuenta.innerHTML = `Tu cuenta $ ${total.toFixed(2)}`;
   cambioDado = total;
+  console.log(cambioDado)
 }
 
 function deshacerMovimiento() {
   lista.pop();
   let nuevoTotal = lista.reduce((a, b) => a + b, 0);
   tuCuenta.innerHTML = `Tu cuenta $ ${nuevoTotal.toFixed(2)}`;
-  cambioDado = total;
+  cambioDado = nuevoTotal;
+  console.log(cambioDado)
 }
 
 function queBilleteUsar(billetes) {
@@ -94,13 +96,13 @@ function entregarCambio() {
 
   if (resultado == resultadoUsuario) {
     pMensajes.style.backgroundColor = "black";
-    pMensajes.style.fontSize = "20px";
+    pMensajes.style.fontSize = "15px";
     pMensajes.style.padding = "15px";
     pMensajes.style.fontFamily = "Sixtyfour";
     pMensajes.innerHTML = "Bien hecho";
   } else {
     pMensajes.style.backgroundColor = "black";
-    pMensajes.style.fontSize = "20px";
+    pMensajes.style.fontSize = "15px";
     pMensajes.style.padding = "15px";
     pMensajes.style.fontFamily = "Sixtyfour Convergence";
     pMensajes.innerHTML = "Intenta de nuevo, el cambio esta mal.";
