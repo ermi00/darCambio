@@ -12,7 +12,12 @@ let btn1000 = document.getElementById("btn$1000");
 let tuCuenta = document.getElementById("tuCuenta");
 let ptotalCuenta = document.getElementById("totalCuenta");
 let pteDan = document.getElementById("teDan");
-let centavo50 = parseFloat(btn50cc.value);
+let pMensajes = document.getElementById("pMensajes");
+let divBilletes = document.getElementById("divBilletes");
+let divMonedas = document.getElementById("divMonedas");
+let iconoCambiar = document.getElementById("iconoCambiar")
+let contador = 0
+// let centavo50 = parseFloat(btn50cc.value);
 
 let totalCuenta = Math.floor(Math.random() * 100);
 let cambioDado;
@@ -83,16 +88,38 @@ function queBilleteUsar(billetes) {
   return lista[0].nombre;
 }
 
-function entregarCambio(){
-  resultado = teDan - totalCuenta
+function entregarCambio() {
+  resultado = teDan - totalCuenta;
   resultadoUsuario = cambioDado;
 
-  if(resultado == resultadoUsuario){
-    alert("EXITO!")
-  } else{
-    alert("EL CAMBIO ESTA MAL!") 
+  if (resultado == resultadoUsuario) {
+    pMensajes.style.backgroundColor = "black";
+    pMensajes.style.fontSize = "20px";
+    pMensajes.style.padding = "15px";
+    pMensajes.style.fontFamily = "Sixtyfour";
+    pMensajes.innerHTML = "Bien hecho";
+  } else {
+    pMensajes.style.backgroundColor = "black";
+    pMensajes.style.fontSize = "20px";
+    pMensajes.style.padding = "15px";
+    pMensajes.style.fontFamily = "Sixtyfour Convergence";
+    pMensajes.innerHTML = "Intenta de nuevo, el cambio esta mal.";
   }
 }
 
-ptotalCuenta.innerHTML = `Total $${totalCuenta}`;
-pteDan.innerHTML = `Recibes $${teDan}`;
+function cambiarBotones() {
+  contador++;
+
+  if (contador % 2 === 0) {
+    divBilletes.style.display = "flex";
+    divMonedas.style.display = "none"
+    iconoCambiar.src = "/assets/monedaIcon.png"
+  } else {
+    divBilletes.style.display = "none";
+    divMonedas.style.display = "flex"
+    iconoCambiar.src = "/assets/billeteIcon.png"
+  }
+}
+
+ptotalCuenta.innerHTML = `Total $${totalCuenta} <br> Recibes $${teDan}`;
+// pteDan.innerHTML = `Recibes $${teDan}`;
