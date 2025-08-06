@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+        <div id="divJuego">
+
+                <div class="divPantalla">
+                        <img class="imgPantalla" src="/assets/fondo.gif" alt="">
+                        <p class="pCobro" id="totalCuenta">Total $ <br> Recibes $</p>
+                        <p class="pMensajes" id="pMensajes"></p>
+                </div>
+
+                <br>
+
+                <div class="divPadreBotones" id="divBilletes">
+                        <div class="divHijoBotones">
+
+                                <div>
+                                        <button value="20" id="btn$20" onclick="meterMoneda(btn20)"><img
+                                                        src="/assets/btn20.png" alt=""></button>
+                                        <button value="50" id="btn$50" onclick="meterMoneda(btn50)"><img
+                                                        src="/assets/btn50.png" alt=""></button>
+                                        <button value="100" id="btn$100" onclick="meterMoneda(btn100)"><img
+                                                        src="/assets/btn100.png" alt=""></button>
+                                </div>
+
+                                <div>
+
+                                        <button value="200" id="btn$200" onclick="meterMoneda(btn200)"><img
+                                                        src="/assets/btn200.png" alt=""></button>
+                                        <button value="500" id="btn$500" onclick="meterMoneda(btn500)"><img
+                                                        src="/assets/btn500.png" alt=""></button>
+                                        <button value="1000" id="btn$1000" onclick="meterMoneda(btn1000)"><img
+                                                        src="/assets/btn1k.png" alt=""></button>
+                                </div>
+
+                        </div>
+
+                        <div class="divHijoBotonesOpciones">
+                                <button id="btnDeshacer" onclick="deshacerMovimiento()"><img class="imgBtn"
+                                                src="/assets/btnDeshacer.png" alt=""></button>
+                                <button id="btnEntregar" onclick="entregarCambio()"><img class="imgBtn"
+                                                src="/assets/btnEntregar.png" alt=""></button>
+                        </div>
+                </div>
+
+                <div class="divPadreBotones" id="divMonedas">
+                        <div class="divHijoBotones">
+
+                                <div>
+                                        <button value="0" id="btn$0" onclick="meterMoneda(btn0)"><img
+                                                        src="/assets/btn0.png" alt=""></button>
+                                        <button value="0.50" id="btn$50cc" onclick="meterMoneda(btn50cc)"><img
+                                                        src="/assets/btn50c.png" alt=""></button>
+                                        <button value="1" id="btn$1" onclick="meterMoneda(btn1)"><img
+                                                        src="/assets/btn1.png" alt=""></button>
+                                </div>
+
+                                <div>
+
+                                        <button value="2" id="btn$2" onclick="meterMoneda(btn2)"><img
+                                                        src="/assets/btn2.png" alt=""></button>
+                                        <button value="5" id="btn$5" onclick="meterMoneda(btn5)"><img
+                                                        src="/assets/btn5.png" alt=""></button>
+                                        <button value="10" id="btn$10" onclick="meterMoneda(btn10)"><img
+                                                        src="/assets/btn10.png" alt=""></button>
+                                </div>
+
+                        </div>
+
+                        <div class="divHijoBotonesOpciones">
+                                <button id="btnDeshacer" onclick="deshacerMovimiento()"><img class="imgBtn"
+                                                src="/assets/btnDeshacer.png" alt=""></button>
+                                <button id="btnEntregar" onclick="entregarCambio()"><img class="imgBtn"
+                                                src="/assets/btnEntregar.png" alt=""></button>
+                        </div>
+                </div>
+
+                <div class="divAlternar">
+                        <h3 id="tuCuenta">Tu cuenta $ 0.00</h3>
+                        <button id="btnReinciar" onclick="reiniciarJuego()"><img class="imgBtn"
+                                        src="/assets/btnReiniciar.png" alt=""></button>
+                        <button onclick="cambiarBotones()"><img id="iconoCambiar" src="/assets/monedaIcon.png"
+                                        alt=""></button>
+                </div>
+
+
+                <!-- <a href="/intro.html">Regresar </a> -->
+        </div>
+</body>
+<script src="/index.js"></script>
+
+</html>

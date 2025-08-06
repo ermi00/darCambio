@@ -24,7 +24,7 @@ let errorSonido = new Audio("assets/error.wav");
 let alternarSonido = new Audio("assets/alternar.wav");
 let deshacerSonido = new Audio("assets/deshacer.wav");
 let ganarSonido = new Audio("assets/ganar.wav");
-let cancionDeFondo  = new Audio("assets/cancionDeFondo.mp3")
+let cancionDeFondo = new Audio("assets/cancionDeFondo.mp3");
 
 let divInicio = document.getElementById("divInicio");
 let divJuego = document.getElementById("divJuego");
@@ -148,21 +148,16 @@ function cambiarBotones() {
 }
 
 function reiniciarJuego() {
-  document.location.reload();
+  window.location.reload(); 
 }
 
 function iniciarJuego() {
-  divInicio.style.display = "none";
-  divJuego.style.display = "block";
   let sonido = selecionarSonido.cloneNode();
   sonido.play();
 }
 
-function tocarMusica(){
-  cancionDeFondo.play()
+function tocarMusica() {
+  cancionDeFondo.play();
 }
 
-divJuego.style.display = "none";
-
 ptotalCuenta.innerHTML = `Total $${totalCuenta} <br> Recibes $${teDan}`;
-// pteDan.innerHTML = `Recibes $${teDan}`;
