@@ -19,12 +19,12 @@ let divBilletes = document.getElementById("divBilletes");
 let divMonedas = document.getElementById("divMonedas");
 let iconoCambiar = document.getElementById("iconoCambiar");
 let btnReinciar = document.getElementById("btnReiniciar");
-let selecionarSonido = new Audio("assets/selecionar.wav");
-let errorSonido = new Audio("assets/error.wav");
-let alternarSonido = new Audio("assets/alternar.wav");
-let deshacerSonido = new Audio("assets/deshacer.wav");
-let ganarSonido = new Audio("assets/ganar.wav");
-let cancionDeFondo = new Audio("assets/cancionDeFondo.mp3");
+let selecionarSonido = new Audio("./assets/selecionar.wav");
+let errorSonido = new Audio("./assets/error.wav");
+let alternarSonido = new Audio("./assets/alternar.wav");
+let deshacerSonido = new Audio("./assets/deshacer.wav");
+let ganarSonido = new Audio("./assets/ganar.wav");
+let cancionDeFondo = new Audio("./assets/cancionDeFondo.mp3");
 
 let divInicio = document.getElementById("divInicio");
 let divJuego = document.getElementById("divJuego");
@@ -139,11 +139,11 @@ function cambiarBotones() {
   if (contador % 2 === 0) {
     divBilletes.style.display = "flex";
     divMonedas.style.display = "none";
-    iconoCambiar.src = "/assets/monedaIcon.png";
+    iconoCambiar.src = "./assets/monedaIcon.png";
   } else {
     divBilletes.style.display = "none";
     divMonedas.style.display = "flex";
-    iconoCambiar.src = "/assets/billeteIcon.png";
+    iconoCambiar.src = "./assets/billeteIcon.png";
   }
 }
 
